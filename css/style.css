@@ -1,0 +1,16 @@
+footer {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  z-index: 1000;
+}
+footer, footer a {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  font-family: "Montserrat", Impact, sans-serif;
+  font-weight: light;
+  opacity: .8;
+}
+
