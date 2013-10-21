@@ -52,7 +52,7 @@
             <p><a href="http://moritz.grauel.is/awesome">http://moritz.grauel.is/awesome</a></p>
           </section>
           <section>
-            <h1>Software Entwickler</h1>
+            <h2>Software Entwickler</h2>
             <p>seit 6 Jahren</p>
             <p>Java</p>
             <p>JavaEE</p>
@@ -61,20 +61,20 @@
             <p class='fragment' data-fragment-index='1'>Clojure</p>
           </section>
           <section>
-            <h1>AngularJS</h1>
+            <h2>AngularJS</h2>
             <p>&gt; 1 Jahr</p>
             <p>Spielprojekte</p>
             <p>viele interne Tools</p>
           </section>
           <section>
-            <h1>Freelancer</h1>
+            <h2>Freelancer</h2>
             <p>Software Entwicklung</p>
             <p>Beratung</p>
             <p>Training</p>
             <p>Web/Mobile/UX</p>
           </section>
           <section>
-            <h1>Privat</h1>
+            <h2>Privat</h2>
             <p>Fahrrad</p>
             <p>Klettern</p>
             <p>Kaffee</p>
@@ -87,7 +87,7 @@
 
         <section>
           <section>
-            <h1>Grober Plan</h1>
+            <h2>Grober Plan</h2>
             <ul>
              <li>bis 10:30 grober Überblick</li>
              <li>30 min Kaffeepause</li>
@@ -100,13 +100,16 @@
             </ul>
           </section>
             <section>
-              <h1>Regeln</h1>
-              <p>unterbrecht mich jederzeit</p>
-              <p>evtl. Vertagung auf nächste Pause</p>
-              <p>es gibt keine dummen Fragen</p>
-              <p>zu langsam? zu schnell? Ping!</p>
-              <p>Interaktiv?</p>
-            </section>
+              <h2>Regeln</h2>
+              <ul>
+               <li>unterbrecht mich jederzeit!</li>
+              <li>evtl. Vertagung auf nächste Pause</li>
+              <li>es gibt keine dummen Fragen</li>
+              <li>Spaß steht im Vordergrund</li>
+              <li>zu langsam? zu schnell? Ping!</li>
+              <li>Interaktiv?</li>
+              </ul>
+              </section>
         </section>
 
         <section>
@@ -174,7 +177,7 @@
 
         <section>
           <section>
-            <h1>Was kann man mit AngularJS machen?</h1>
+            <h2>Was kann man mit AngularJS machen?</h2>
           </section>
           <section>
             <h3>Großartige Single-Page Apps bauen!</h3>
@@ -193,7 +196,7 @@
             <ul>
               <li>Model: Beliebige JS Objekte</li>
               <li>View: HTML++</li>
-              <li>Controller: <em>Glue Code</em></li>
+              <li>Controller: <em>Glue Code</em> zwischen Logik und View</li>
             </ul>
           </section>
           <section>
@@ -230,7 +233,7 @@
 
         <section>
           <section>
-            <h1>Was kann man mit AngularJS nicht machen?</h1>
+            <h2>Was kann man mit AngularJS nicht machen?</h2>
           </section>
           <section>
             <h3>Alte Internet Explorer beglücken</h3>
@@ -303,9 +306,76 @@
           </section>
        </section>
 
+       <section>
         <section>
           <h1>Anatomie einer AngularJS Anwendung</h1>
         </section>
+        <section>
+          <h2>Wichtige Konzepte</h2>
+          <ul>
+            <li>Model</li>
+            <li>View</li>
+            <li>Controller</li>
+            <li>Scope</li>
+            <li>Service</li>
+            <li>Directive</li>
+            <li>Filter</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Model</h3>
+          <p>eure Werte</p>
+          <p>beliebige JavaScript Objekte</p>
+          <p>keine Superclass o.ä.</p>
+          <p><em>dumb model</em> (keine Logik)</p>
+        </section>
+        <section>
+          <h3>View</h3>
+          <p>HTML Template</p>
+          <p>keine freie Template wahl</p>
+          <p>wenig Logik</p>
+          <p><code>{{ 1 + 1 }}</code></p>
+          <p>Directives</p>
+        </section>
+        <section>
+          <h3>Controller</h3>
+          <p>JavaScript Function</p>
+          <p>Singleton</p>
+          <p>bereitet Werte für View vor</p>
+          <p>delegiert Events an Business Logik</p>
+        </section>
+        <section>
+          <h3>Scope</h3>
+          <p><em>Glue</em> zwischen View und Controller</p>
+          <p>Hierarchisch</p>
+          <p>Gewöhnungsbedürftig</p>
+        </section>
+        <section>
+          <h3>Service</h3>
+          <p><em>Here be <strike>Dragons</strike> Logic</em></p>
+          <p>JavaScript Function/Singleton</p>
+          <p>3rd Party Lib/AJAX</p>
+        </section>
+        <section>
+          <h3>Directive</h3>
+          <p>Erweiterung von HTML</p>
+          <ol>
+            <li>Attribut</li>
+            <li>Tag</li>
+            <li>Klasse</li>
+            <li>Kommentar</li>
+          </ol>
+        </section>
+        <section>
+          <h3>Filter</h3>
+          <p>Datenformatierer</p>
+          <p>z.B. uppercase</p>
+        </section>
+
+        <section>
+          <h2>Bootstrap einer AngularJS Anwendung</h2>
+        </section>
+       </section>
 
         <section>
           <section>
