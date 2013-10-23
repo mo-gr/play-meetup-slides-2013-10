@@ -13,4 +13,7 @@ footer, footer a {
   font-weight: light;
   opacity: .8;
 }
-
+.reveal pre code {
+  font-size: 120%;
+  border-radius: 7px;
+}

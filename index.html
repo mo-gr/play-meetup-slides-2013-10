@@ -369,12 +369,9 @@
         <section>
           <h3>Filter</h3>
           <p>Datenformatierer</p>
-          <p>z.B. uppercase</p>
+          <p>z.B. <code>{{ 'lol' | uppercase }}</code></p>
         </section>
 
-        <section>
-          <h2>Bootstrap einer AngularJS Anwendung</h2>
-        </section>
        </section>
 
         <section>
@@ -392,7 +389,65 @@
         </section>
 
         <section>
-          <h1>Dependency Injection</h1>
+          <section>
+            <h1>Dependency Injection</h1>
+          </section>
+          <section>
+            <h3>DI</h3>
+            <ul>
+              <li>Abhängigkeiten werden zentral hineingereicht</li>
+              <li>Alternative: Globals/Singletons/ServiceLocator/new</li>
+            </ul>
+            <br />
+            <pre><code>
+              function (dep1, dep2, dep3) { /*...*/ }
+            </code></pre>
+          </section>
+          <section>
+            <h3>Autowiring</h3>
+            <ul>
+              <li>AngularJS löst dependencies auf</li>
+              <li>kein manuelles Verknüpfen nötig</li>
+              <li>Wie?</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Magic</h3>
+            <ul>
+               <li>DI by Parametername</li>
+               <li>JavaScript hat Named Parameter?</li>
+            </ul>
+            <br />
+            <pre><code data-trim>
+controller('MyCtrl', function ($scope, dep2, dep3) {} )
+// oder auch
+controller('MyCtrl', function (dep3, $scope, dep2) {} )
+            </code></pre>
+          </section>
+          <section>
+            <h3>Aber wie?</h3>
+            <pre><code>
+      var FN_ARGS = /^function\s*[^\(]*\(\s*([^\)]*)\)/m;
+      //...snip
+      if (fn.length) {
+        fnText = fn.toString().replace(STRIP_COMMENTS, '');
+        argDecl = fnText.match(FN_ARGS);
+        forEach(argDecl[1].split(FN_ARG_SPLIT), function(arg){
+          arg.replace(FN_ARG, function(all, underscore, name){
+            $inject.push(name);
+          });
+        });
+      }
+            </code></pre>
+          </section>
+          <section>
+            <h3>Warum?</h3>
+            <ul>
+              <li>weniger boilerplate</li>
+              <li>seperation of concern</li>
+              <li>Testbarkeit!</li>
+            </ul>
+          </section>
         </section>
       </div>
 
@@ -418,6 +473,9 @@
         theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
         transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
+        dependencies: [
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          ]
       });
 
     </script>
