@@ -32,7 +32,8 @@
     <div class="reveal">
 
       <div class="slides">
-        <section>
+        <section id='title'
+          data-background='img/AngularJS-Shield-large.png' data-background-size='400px'>
           <h1>Angular JS</h1>
           <h3>Zaunberg Talks Workshop</h3>
           <p>
@@ -299,6 +300,7 @@
               <li>Directives</li>
               <li>Scope</li>
               <li>Services</li>
+              <li>Routing</li>
             </ul>
           </section>
            <section>
@@ -313,6 +315,7 @@
             <h3>16:00 - 17:30</h3>
             <ul>
               <li>Modularisierung</li>
+              <li>Animation</li>
               <li>3rd Party Libraries</li>
               <li>Best Practices</li>
               <li>Q&amp;A</li>
@@ -397,8 +400,19 @@
             <p>Fallback auf jQLite</p>
           </section>
             <section>
-              <h3>konzeptionell sehr unterschiedliches Modell</h3>
-              <p><em>Empfehlung:</em>Anfangs ohne jQuery um nicht in alte Gewohnheiten zurück zu fallen</p>
+              <p>konzeptionell sehr unterschiedliches Modell</p>
+              <p data-fragment-index='1' class='fragment roll-in'><em>Empfehlung:</em></p>
+              <p data-fragment-index='1' class='fragment roll-in'>Anfangs ohne jQuery um nicht in alte Gewohnheiten zurück zu fallen</p>
+            </section>
+            <section>
+              <h3>jQuery</h3>
+              <ul>
+                <li class='fragment roll-in' data-fragment-index='1'>Browserfalten ausbüglen</li>
+                <li class='fragment roll-in' data-fragment-index='2'>DOM Manipulation</li>
+                <li class='fragment roll-in' data-fragment-index='3'>Event Handling</li>
+                <li class='fragment roll-in' data-fragment-index='4'>AJAX</li>
+                <li class='fragment roll-in' data-fragment-index='5'>Animation?</li>
+              </ul>
             </section>
         </section>
 
@@ -461,6 +475,68 @@ controller('MyCtrl', function (dep3, $scope, dep2) {} )
               <li>seperation of concern</li>
               <li>Testbarkeit!</li>
             </ul>
+          </section>
+
+          <section>
+            <h3>Warum nicht?</h3>
+            <ul>
+              <li class='fragment roll-in'>Kein Grund</li>
+              <li class='fragment roll-in'>DI ist immer eine gute Idee</li>
+              <li class="fragment roll-in">...wirklich!</li>
+              <li class="fragment roll-in">Aber...</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Minification ändert Parameternamen</h3>
+            <p class='fragment roll-in'>das ist schlecht</p>
+            <p class='fragment roll-in'><em>AngularJS spezifisches Problem</em></p>
+          </section>
+
+          <section>
+            <h3>nur grundlegende minification</h3>
+            <ul>
+              <li>Whitespace</li>
+              <li>Paramter Renaming</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>ng-min</h3>
+            <p>AngularJS minifier</p>
+          </section>
+
+          <section>
+            <h3>$inject Annotation</h3>
+            <pre><code>
+var MyController =
+    app.controller('MyController',
+                   function ($scope, AwesomeService) {
+                     /*...*/
+                   });
+
+MyController.$inject = ['$scope', 'AwesomeService'];
+            </code></pre>
+          </section>
+
+          <section>
+            <h3>Array Syntax</h3>
+            <p>überall möglich, wo Angular DI unterstützt</p>
+            <p><em>meine Empfehlung</em></p>
+            <pre><code>
+var MyController =
+    app.controller('MyController',
+                   ['$scope', 'AwesomeService',
+                    function ($scope, AwesomeService) {
+                      /*...*/
+                    }]);
+            </code></pre>
+          </section>
+
+          <section>
+            <h3><em>btw:</em> angular.min.js nicht minifizieren!</h3>
+            <p>es ist schon minifiziert</p>
+            <p>es geht kaputt</p>
           </section>
 
           <section>

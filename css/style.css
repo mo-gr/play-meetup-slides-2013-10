@@ -17,3 +17,6 @@ footer, footer a {
   font-size: 120%;
   border-radius: 7px;
 }
+#title, #title h1, #title h3 {
+  text-shadow: 0 0 5px black;
+}
