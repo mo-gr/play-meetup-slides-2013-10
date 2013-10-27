@@ -5,9 +5,21 @@
   <title></title>
   <link rel="stylesheet" href="css/pure.css" />
 </head>
-<body ng-app>
-<input type="text" ng-model="world"/>
-  <h1>Hallo {{ world }}</h1>
-  <script type="text/javascript" src="js/angular.js"></script>
+<body ng-app='myApp' >
+    <div ng-controller="MyCtrl">
+      <input type="text" ng-model="model.world"/>
+
+      <h1>Hallo {{ model.world }}</h1>
+    </div>
+
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script>
+        var model = {};
+
+        var app = angular.module('myApp', []);
+        app.controller('MyCtrl', function($scope) {
+          $scope.model = model;
+        });
+    </script>
 </body>
 </html>
