@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>AngularJS Workshop – Teil 1</title>
+    <title>Ang18n</title>
 
     <meta name="author" content="Moritz Grauel">
 
@@ -32,10 +32,9 @@
     <div class="reveal">
 
       <div class="slides">
-        <section id='title'
-          data-background='img/AngularJS-Shield-large.png' data-background-size='400px'>
-          <h1>Angular JS</h1>
-          <h3>Zaunberg Talks Workshop</h3>
+        <section>
+          <h1>Ang18n</h1>
+          <h3>Play! Meetup Berlin</h3>
           <p>
             <small>Created by <a href="http://moritz.grauel.is/awesome">Moritz Grauel</a> / <a href="http://twitter.com/mo_gr">@mo_gr</a></small>
           </p>
@@ -43,516 +42,119 @@
 
         <section>
           <section>
-           <h1>Wer bin ich?</h1>
+           <h1>Who am I?</h1>
           </section>
           <section>
             <h1>Moritz Grauel</h1>
-            <p>eingebohrener Berliner</p>
+            <p>Freelance Developer/Consultant</p>
             <p><a href="http://twitter.com/mo_gr">@mo_gr</a></p>
             <p><a href="mailto:mo@notadomain.com">mo@notadomain.com</a></p>
             <p><a href="http://moritz.grauel.is/awesome">http://moritz.grauel.is/awesome</a></p>
           </section>
+        </section>
+
+        <section>
           <section>
-            <h2>Software Entwickler</h2>
-            <p>seit 6 Jahren</p>
-            <p>Java</p>
-            <p>JavaEE</p>
-            <p>Web</p>
-            <p>früher auch iOS</p>
-            <p class='fragment' data-fragment-index='1'>Clojure</p>
+            <h1>Why are you listening to me?</h1>
+          </section>
+          <section
+            data-background='img/AngularJS-Shield-large.png' data-background-size='400px'>
           </section>
           <section>
-            <h2>AngularJS</h2>
-            <p>&gt; 1 Jahr</p>
-            <p>Spielprojekte</p>
-            <p>viele interne Tools</p>
+            <h3>AngularJS is cool</h3>
           </section>
           <section>
-            <h2>Freelancer</h2>
-            <p>Software Entwicklung</p>
-            <p>Beratung</p>
-            <p>Training</p>
-            <p>Web/Mobile/UX</p>
+            <h3>But i18n lacks</h3>
           </section>
           <section>
-            <h2>Privat</h2>
-            <p>Fahrrad</p>
-            <p>Klettern</p>
-            <p>Kaffee</p>
-            <p>Bier</p>
-          </section>
-          <section>
-            <h1>Und ihr so?</h1>
+            <h3>Play! to the rescue!</h3>
           </section>
         </section>
 
         <section>
           <section>
-            <h2>Grober Plan</h2>
+            <h1>5 min Angular Crashcourse</h1>
+            <p><a href="/demo/01/" target="_blank">→ Crashcource</a></p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>Shameless</h1><h1>self-plug</h1>
+          </section>
+          <section>
+            <h1>Wanna learn more about Angular?</h1>
+          </section>
+          <section>
+            <h1>Good!</h1>
+          </section>
+          <section>
+            <h2>I give a workshop</h2>
+          </section>
+          <section>
+            <h3>Zaunberg Talks</h3>
+            <p>18.11. / Berlin</p>
+            <p>Deutsch</p>
+            <p>6.5h AngularJS Workshop</p>
+            <p><a href="http://zaunberg-talks.de/berlin2013/" target="_blank">→ Link</a></p>
+            <p>...ask me later</p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>The Application</h2>
+          </section>
+          <section>
+            <p>Simple ToDo App</p>
+            <p><a href="http://ang18n-example.herokuapp.com">Hosted on Heroku</a></p>
+            <p><a href="https://github.com/mo-gr/ang18n">Code on github</a></p>
+          </section>
+          <section>
+            <p>AngularJS Frontend</p>
+            <p>Single Page</p>
+            <p>CoffeeScript</p>
+          </section>
+          <section>
+            <p>Play!/Scala backend</p>
+            <p>JSON/REST</p>
+          </section>
+        </section>
+
+        <section>
+          <h2>Demo</h2>
+        </section>
+
+        <section>
+          <h2>Code</h2>
+        </section>
+
+        <section>
+          <section>
+            <h2>Possible Improvements</h2>
             <ul>
-             <li>bis 10:30 grober Überblick</li>
-             <li>30 min Kaffeepause</li>
-             <li>11:00 - 12:30 Session</li>
-             <li>60 min Mittag</li>
-             <li>13:30 - 15:30 Hands-On</li>
-             <li>30 min Verschnaufpuse</li>
-             <li>16:30 - 17:30 Session/Q&amp;A</li>
-             <li>gemeinsames Abendessen</li>
-            </ul>
-          </section>
-            <section>
-              <h2>Regeln</h2>
-              <ul>
-               <li>unterbrecht mich jederzeit!</li>
-              <li>evtl. Vertagung auf nächste Pause</li>
-              <li>es gibt keine dummen Fragen</li>
-              <li>Spaß steht im Vordergrund</li>
-              <li>zu langsam? zu schnell? Ping!</li>
-              <li>Interaktiv?</li>
-              </ul>
-              </section>
-        </section>
-
-        <section>
-          <section>
-            <h1>AngularJS</h1>
-          </section>
-          <section>
-            <h3>Superheroic JavaScript MVW Framework</h3>
-          </section>
-          <section>
-            <h3>Client-Side Application Framework</h3>
-            <p>Framework vs. Library?</p>
-            <p><em>don't call us, we call you</em></p>
-          </section>
-          <section>
-            <h3>HTML enhanced for web apps!</h3>
-          </section>
-          <section>
-            <blockquote cite="https://github.com/angular/angular.js">it makes development fun!</blockquote>
-          </section>
-          <section>
-            <h3>viele innovative Ansätze</h3>
-          </section>
-          <section>
-            <h3>starker Fokus: Tests</h3>
-          </section>
-          <section>
-            <h3>Open Source</h3>
-            <p>MIT License</p>
-            <p><a href="https://github.com/angular/angular.js">Code auf GitHub</a></p>
-          </section>
-        </section>
-
-        <section>
-          <section>
-            <h1>Wer?</h1>
-          </section>
-          <section>
-            <h3>Entwickelt von Google</h3>
-            <p>erster Release 2009</p>
-            <p>Aktuell 1.2.0</p>
-          </section>
-          <section>
-            <h3>über 400 contributor</h3>
-            <p>Igor Minar</p>
-            <p>Miško Hevery</p>
-          </section>
-          <section>
-            <h3>zunächst persönliches Projekt von Miško</h3>
-            <p>bald danach offiziell von Google unterstützt</p>
-            <p>Google Team arbeitet Vollzeit an AngularJS</p>
-          </section>
-          <section>
-            <h3>In the wild?</h3>
-            <p><a href="http://hawt.io" target="_blank">hawt.io</a></p>
-            <p><a href="http://plnkr.co" target="_blank">Plunker</a></p>
-            <p><a href="http://keminglabs.com/blog/angular-cljs-weather-app/" target="_blank">Weathertron</a></p>
-          </section>
-          <section>
-            <h3>Sony</h3>
-            <p>PlayStation 3 YouTube app</p>
-            <p><a href="http://blog.angularjs.org/2012/08/your-excuse-to-buy-playstation.html">(mehr Details)</a></p>
-          </section>
-        </section>
-
-        <section>
-          <section>
-            <h2>Was kann man mit AngularJS machen?</h2>
-          </section>
-          <section>
-            <h3>Großartige Single-Page Apps bauen!</h3>
-          </section>
-          <section>
-            <h3>Angulars wichtigste Features</h3>
-            <ul>
-              <li><em>2-way databinding</em></li>
-              <li>Templating</li>
-              <li><em>Dependency Injection</em></li>
-              <li>Modularität und Testbarkeit</li>
-            </ul>
-          </section>
-          <section>
-            <h3>Saubere, logische Model-View-Controller Trennung</h3>
-            <ul>
-              <li>Model: Beliebige JS Objekte</li>
-              <li>View: HTML++</li>
-              <li>Controller: <em>Glue Code</em> zwischen Logik und View</li>
-            </ul>
-          </section>
-          <section>
-            <h3>Directiven</h3>
-            <p>HTML Tags und Attribute beliebig erweitern</p>
-            <p>Angulars Alleinstellungsmerkmal</p>
-          </section>
-          <section>
-            <h3>Datentransformation, Filterung und Validierung</h3>
-          </section>
-          <section>
-            <h3>Form Handling</h3>
-          </section>
-          <section>
-            <h3>AJAX Kommunikation zu Servern</h3>
-            <p><em>Promise</em> basiert</p>
-          </section>
-          <section>
-            <h3>Optionale (offizielle) Module</h3>
-            <p>Routing</p>
-            <p>Animationen</p>
-            <p>Cookie Handling</p>
-            <p>HTTP Resource Handling (REST)</p>
-            <p>Touch</p>
-            <p>...und mehr</p>
-          </section>
-          <section>
-            <h3>Wiederverwendbare Module schreiben</h3>
-          </section>
-          <section>
-            <h3>Unit- und End-to-End-Tests</h3>
-          </section>
-        </section>
-
-        <section>
-          <section>
-            <h2>Was kann man mit AngularJS nicht machen?</h2>
-          </section>
-          <section>
-            <h3>Alte Internet Explorer beglücken</h3>
-
-            <p>Offiziell ab IE8</p>
-            <p>IE8 braucht spezielle Workarounds</p>
-            <p>IE6/7 nur inoffiziell/ungetestet</p>
-          </section>
-          <section>
-            <h3>AngularJS ist kein Komponenten Framework</h3>
-            <p><a href="http://angular-ui.github.io">angular-ui</a></p>
-            <p><a href="http://angular-ui.github.io/bootstrap/">ui bootstrap</a></p>
-            <p>Integration von 3rd party Komponenten nicht immer einfach aber möglich</p>
-          </section>
-          <section>
-            <h3>keine UI Vorgaben, keine Widgets</h3>
-            <p>AngularJS bringt (fast) kein CSS mit</p>
-          </section>
-          <section>
-            <h3>AngularJS ist ein reines Client Framework</h3>
-
-            <p>Nur Browser</p>
-            <p>keine Vorgaben für Server</p>
-          </section>
-          <section>
-            <h3>Lernkurve</h3>
-          </section>
-          <section>
-            <h3>JavaScript</h3>
-            <p>gängige JavaScript Fallstricke bleiben</p>
-          </section>
-          <section>
-            <h3>not a silver bullet</h3>
-            <ul>
-              <li>Migration?</li>
-              <li>Games?</li>
-              <li>nojs/SEO?</li>
-              <li>DOM Heavy?</li>
-              <li>pure speed?</li>
-            </ul>
-          </section>
-        </section>
-
-        <section>
-          <h1>Demo!</h1>
-        </section>
-
-        <section>
-          <section>
-            <h1>Woprkshop Agenda</h1>
-          </section>
-          <section>
-            <h3>bis zur Kaffee Pause (10:30)</h3>
-            <ul>
-              <li>Anatomie einer AngularJS Anwendung</li>
-              <li>Dependency Injection</li>
-            </ul>
-          </section>
-          <section>
-            <h3>11:00 - 12:30</h3>
-            <ul>
-              <li>Templating</li>
-              <li>Directives</li>
-              <li>Scope</li>
-              <li>Services</li>
-              <li>Routing</li>
-            </ul>
-          </section>
-           <section>
-            <h3>13:30 - 15:30</h3>
-            <ul>
-              <li>Promises</li>
-              <li>Testing</li>
-              <li>Aufgabe</li>
-            </ul>
-          </section>
-            <section>
-            <h3>16:00 - 17:30</h3>
-            <ul>
-              <li>Modularisierung</li>
-              <li>Animation</li>
-              <li>3rd Party Libraries</li>
-              <li>Best Practices</li>
-              <li>Q&amp;A</li>
-            </ul>
-          </section>
-       </section>
-
-       <section>
-        <section>
-          <h1>Anatomie einer AngularJS Anwendung</h1>
-        </section>
-        <section>
-          <h2>Wichtige Konzepte</h2>
-          <ul>
-            <li>Model</li>
-            <li>View</li>
-            <li>Controller</li>
-            <li>Scope</li>
-            <li>Service</li>
-            <li>Directive</li>
-            <li>Filter</li>
-          </ul>
-        </section>
-        <section>
-          <h3>Model</h3>
-          <p>eure Werte</p>
-          <p>beliebige JavaScript Objekte</p>
-          <p>keine Superclass o.ä.</p>
-          <p><em>dumb model</em> (keine Logik)</p>
-        </section>
-        <section>
-          <h3>View</h3>
-          <p>HTML Template</p>
-          <p>keine freie Template wahl</p>
-          <p>wenig Logik</p>
-          <p><code>{{ 1 + 1 }}</code></p>
-          <p>Directives</p>
-        </section>
-        <section>
-          <h3>Controller</h3>
-          <p>JavaScript Function</p>
-          <p>Singleton</p>
-          <p>bereitet Werte für View vor</p>
-          <p>delegiert Events an Business Logik</p>
-        </section>
-        <section>
-          <h3>Scope</h3>
-          <p><em>Glue</em> zwischen View und Controller</p>
-          <p>Hierarchisch</p>
-          <p>Gewöhnungsbedürftig</p>
-        </section>
-        <section>
-          <h3>Service</h3>
-          <p><em>Here be <strike>Dragons</strike> Logic</em></p>
-          <p>JavaScript Function/Singleton</p>
-          <p>3rd Party Lib/AJAX</p>
-        </section>
-        <section>
-          <h3>Directive</h3>
-          <p>Erweiterung von HTML</p>
-          <ol>
-            <li>Attribut</li>
-            <li>Tag</li>
-            <li>Klasse</li>
-            <li>Kommentar</li>
-          </ol>
-        </section>
-        <section>
-          <h3>Filter</h3>
-          <p>Datenformatierer</p>
-          <p>z.B. <code>{{ 'lol' | uppercase }}</code></p>
-        </section>
-
-       </section>
-
-        <section>
-          <section>
-            <h1>jQuery</h1>
-          </section>
-          <section>
-            <h3>AngularJS verwendet jQuery wenn vorhanden</h3>
-            <p>Fallback auf jQLite</p>
-          </section>
-            <section>
-              <p>konzeptionell sehr unterschiedliches Modell</p>
-              <p data-fragment-index='1' class='fragment roll-in'><em>Empfehlung:</em></p>
-              <p data-fragment-index='1' class='fragment roll-in'>Anfangs ohne jQuery um nicht in alte Gewohnheiten zurück zu fallen</p>
-            </section>
-            <section>
-              <h3>jQuery</h3>
-              <ul>
-                <li class='fragment roll-in' data-fragment-index='1'>Browserfalten ausbüglen</li>
-                <li class='fragment roll-in' data-fragment-index='2'>DOM Manipulation</li>
-                <li class='fragment roll-in' data-fragment-index='3'>Event Handling</li>
-                <li class='fragment roll-in' data-fragment-index='4'>AJAX</li>
-                <li class='fragment roll-in' data-fragment-index='5'>Animation?</li>
-              </ul>
-            </section>
-        </section>
-
-        <section>
-          <section>
-            <h1>Dependency Injection</h1>
-          </section>
-          <section>
-            <h3>DI</h3>
-            <ul>
-              <li>Abhängigkeiten werden zentral hineingereicht</li>
-              <li>Alternative: Globals/Singletons/ServiceLocator/new</li>
-            </ul>
-            <br />
-            <pre><code>
-              function (dep1, dep2, dep3) { /*...*/ }
-            </code></pre>
-          </section>
-          <section>
-            <h3>Autowiring</h3>
-            <ul>
-              <li>AngularJS löst dependencies auf</li>
-              <li>kein manuelles Verknüpfen nötig</li>
-              <li>Wie?</li>
-            </ul>
-          </section>
-          <section>
-            <h3>Magic</h3>
-            <ul>
-               <li>DI by Parametername</li>
-               <li>JavaScript hat Named Parameter?</li>
-            </ul>
-            <br />
-            <pre><code data-trim>
-controller('MyCtrl', function ($scope, dep2, dep3) {} )
-// oder auch
-controller('MyCtrl', function (dep3, $scope, dep2) {} )
-            </code></pre>
-          </section>
-          <section>
-            <h3>Aber wie?</h3>
-            <pre><code>
-      var FN_ARGS = /^function\s*[^\(]*\(\s*([^\)]*)\)/m;
-      //...snip
-      if (fn.length) {
-        fnText = fn.toString().replace(STRIP_COMMENTS, '');
-        argDecl = fnText.match(FN_ARGS);
-        forEach(argDecl[1].split(FN_ARG_SPLIT), function(arg){
-          arg.replace(FN_ARG, function(all, underscore, name){
-            $inject.push(name);
-          });
-        });
-      }
-            </code></pre>
-          </section>
-          <section>
-            <h3>Warum?</h3>
-            <ul>
-              <li>weniger boilerplate</li>
-              <li>seperation of concern</li>
-              <li>Testbarkeit!</li>
+              <li>hook up JavaScript Test</li>
+              <li>minify JavaScript/CSS</li>
+              <li>simplify JSON</li>
+              <li>Clean up the model</li>
+              <li>Use a real DB</li>
+              <li>Use a NoSQL?</li>
+              <li>Stream/Realtime</li>
+              <li>...you name it!</li>
             </ul>
           </section>
 
           <section>
-            <h3>Warum nicht?</h3>
-            <ul>
-              <li class='fragment roll-in'>Kein Grund</li>
-              <li class='fragment roll-in'>DI ist immer eine gute Idee</li>
-              <li class="fragment roll-in">...wirklich!</li>
-              <li class="fragment roll-in">Aber...</li>
-            </ul>
-          </section>
-
-          <section>
-            <h3>Minification ändert Parameternamen</h3>
-            <p class='fragment roll-in'>das ist schlecht</p>
-            <p class='fragment roll-in'><em>AngularJS spezifisches Problem</em></p>
-          </section>
-
-          <section>
-            <h3>nur grundlegende minification</h3>
-            <ul>
-              <li>Whitespace</li>
-              <li>Paramter Renaming</li>
-            </ul>
-          </section>
-
-          <section>
-            <h3>ng-min</h3>
-            <p>AngularJS minifier</p>
-          </section>
-
-          <section>
-            <h3>$inject Annotation</h3>
-            <pre><code>
-var MyController =
-    app.controller('MyController',
-                   function ($scope, AwesomeService) {
-                     /*...*/
-                   });
-
-MyController.$inject = ['$scope', 'AwesomeService'];
-            </code></pre>
-          </section>
-
-          <section>
-            <h3>Array Syntax</h3>
-            <p>überall möglich, wo Angular DI unterstützt</p>
-            <p><em>meine Empfehlung</em></p>
-            <pre><code>
-var MyController =
-    app.controller('MyController',
-                   ['$scope', 'AwesomeService',
-                    function ($scope, AwesomeService) {
-                      /*...*/
-                    }]);
-            </code></pre>
-          </section>
-
-          <section>
-            <h3><em>btw:</em> angular.min.js nicht minifizieren!</h3>
-            <p>es ist schon minifiziert</p>
-            <p>es geht kaputt</p>
-          </section>
-
-          <section>
-            <h2>Alles klar?</h2>
+            <h1>Go Hack!</h1>
           </section>
         </section>
 
-        <section>
-          <h1>Kaffee</h1>
-        </section>
       </div>
 
     </div>
 
     <footer>
-      Moritz – <a href="https://twitter.com/mo_gr" target="_blank">@mo_gr</a> – #zbtalks
+      Moritz – <a href="https://twitter.com/mo_gr" target="_blank">@mo_gr</a>
     </footer>
 
     <script src="lib/js/head.min.js"></script>
